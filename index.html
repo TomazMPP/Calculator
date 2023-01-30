@@ -5,8 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="estilocalc.css">
+<style>
+    body {
+    background-color: grey;
+    color: black;
+    font: normal 18pt Arial;
+}
+
+input {
+    font: normal 18pt Arial;
+    width: 140px
+}
+div#res {
+margin-top: 20px;
+}
+h1 {
+color: black;
+}
+h2{
+font: 25pt Arial;
+margin-bottom: 5px;
+color: black
+}
+div#mult {
+margin-top: 20px;
+}
+
+div#divi {
+margin-top: 20px;
+}
+
+input[type="button"] {
+  font-size: 18px;
+  padding: 5px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  cursor: pointer; }
+
+  section {
+background: white;
+border-radius: 10px;
+padding: 15px;
+width: 500px;
+margin: auto;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363)
+}
+
+footer {
+color: white;
+text-align: center;
+font-style: italic;
+}
+</style>
 </head>
+
 <body>
     <center><h1>Calculator</h1>
     <section>    <h2>Sum</h2>
@@ -29,6 +82,38 @@
     <footer>
         <p>&copy; TomazMPP</p>
             </footer>
-<script src="calculadorajs.js"></script>
+<script>
+    
+    function somar() {
+            var tn1 = document.getElementById('txtn1')
+        var tn2 = document.getElementById('txtn2')
+        var res = document.getElementById('res')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
+        }
+
+        function multiplicar() {
+            var tn3 = document.getElementById('txtn3')
+            var tn4 = document.getElementById('txtn4')
+            var mult = document.getElementById('mult')
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var m = n3 * n4
+            mult.innerHTML = `A multiplicação entre ${n3} e ${n4} é igual a <strong>${m}</strong>`
+        }
+
+        function dividir() {
+            var tn5 = document.getElementById('txtn5')
+            var tn6 = document.getElementById('txtn6')
+            var divi = document.getElementById('divi')
+            var n5 = Number(tn5.value)
+            var n6 = Number(tn6.value)
+            var d = n5 / n6
+            divi.innerHTML = `A divisão entre ${n5} e ${n6} é igual a <strong>${d}</strong>`
+        }
+         
+</script>
 </body>
 </html>
